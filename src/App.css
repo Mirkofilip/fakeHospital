@@ -16,7 +16,24 @@ ul {
   padding: 0;
 }
 
-ul li a {
+.sideMenu ul li {
+  position: relative;
+}
+
+.sideMenu ul li.active:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-right: -1.25rem;
+  height: 100%;
+  width: 3rem;
+  opacity: 1;
+  background-color: #f1f5f9;
+}
+
+.sideMenu ul li a {
     height: 50px;
     position: relative;
     margin-bottom: 0.25rem;
@@ -27,6 +44,48 @@ ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
+}
+
+.sideMenu ul li a svg {
+  margin-right: 15px;
+}
+
+.sideMenu ul li.active a {
+  color: #000;
+  background-color: #f1f5f9;
+  position: relative;
+}
+
+.sideMenu ul li.active a:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  margin-top: -30px;
+  transform: rotate(90deg) scale(1.04);
+  background-size: 100%;
+  background-image: url("./curveAfter.svg");
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-right: -1.25rem;
+}
+
+.active a:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  margin-top: 50px;
+  transform: scale(1.04);
+  background-size: 100%;
+  background-image: url("./curveAfter.svg");
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-right: -1.25rem;
+}
+
+.sideMenu ul li a.active svg {
+  stroke: var(--color-primary);
 }
 
 .grid-cols-12 {
@@ -79,6 +138,54 @@ ul li a {
   pointer-events: none;
 }
 
+.logo {
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+.breacrumb {
+  text-align: left;
+}
+
+.breacrumb span {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.borderHr {
+  position: relative;
+  z-index: 10;
+  height: 1px;
+  width: 100%;
+  background-color: rgb(255 255 255 / 0.08);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.borderHrBlue {
+  position: relative;
+  z-index: 10;
+  height: 1px;
+  width: 100%;
+  background-color: rgb(96 96 96 / 13%);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.logo h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.logo img {
+  max-width: 100px;
+  width: 100%;
+}
+
 body {
   font-family: Roboto;
   font-size: 0.875rem;
@@ -116,18 +223,33 @@ body {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     font-weight: 500;
-    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 200ms;
+    width: 100%;
+    font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #244ccf;
+  color: #fff;
 }
 
 .btn svg {
   margin-right: 15px;
+  width: 17px;
+}
+
+
+
+.fc .fc-button-primary:disabled {
+  background-color: #fff !important;
+  color: var(--color-primary) !important;
+  text-transform: capitalize;
+  font-weight: 500;
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -151,10 +273,20 @@ body {
   color: #61dafb;
 }
 
-.fc-h-event,
 
+.fc .fc-button-primary,
+.fc-h-event,
 .react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range, .react-datepicker__month-text--selected, .react-datepicker__month-text--in-selecting-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--selected, .react-datepicker__quarter-text--in-selecting-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--selected, .react-datepicker__year-text--in-selecting-range, .react-datepicker__year-text--in-range {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary) !important;
+  transition: all .2s linear;
+}
+
+.react-datepicker__day--keyboard-selected, .react-datepicker__month-text--keyboard-selected, .react-datepicker__quarter-text--keyboard-selected, .react-datepicker__year-text--keyboard-selected {
+  color: #fff !important;
+}
+
+.fc-h-event {
+  padding-left: 10px;
 }
 
 .fc .fc-daygrid-day-number,
@@ -176,25 +308,20 @@ body {
   .\32xl\:col-span-3 {
     grid-column: span 3 / span 3;
   }
+  .\32xl\:col-span-9 {
+    grid-column: span 9 / span 9;
+  }
 }
 
 @media(min-width:1280px) {
   .xl\:col-span-4 {
     grid-column: span 4 / span 4;
   }
-}
-
-  @media (min-width: 1280px){
   .xl\:col-span-8 {
-      grid-column: span 8 / span 8;
-  }
+    grid-column: span 8 / span 8;
+}
 }
 
-@media (min-width: 1536px){
-  .\32xl\:col-span-9 {
-    grid-column: span 9 / span 9;
-  }
-}
 
 @media (max-width: calc(1279px)) {
   .sideMenu {
