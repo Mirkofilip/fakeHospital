@@ -15,14 +15,16 @@ const Datapicker = () => {
       setEndDate(end);
     };
     return (
-      <DatePicker
-        selected={startDate}
-        onChange={onChange}
-        startDate={startDate}
-        endDate={endDate}
-        selectsRange
-        inline
-      />
+      <div className="col-span-12 box">
+        <DatePicker
+          selected={startDate}
+          onChange={onChange}
+          startDate={startDate}
+          endDate={endDate}
+          selectsRange
+          inline
+        />
+      </div>
   );
 };
 
