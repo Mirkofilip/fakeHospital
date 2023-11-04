@@ -36,7 +36,7 @@ function BoxChart() {
     }, []);
 
     return (
-        <div className="col-span-12 xl:col-span-8 2xl:col-span-9">
+        <div className="col-span-12 xl-col-span-8 xl-col-span-9">
             <div className="col-span-12 box">
                 <canvas ref={canvasRef} id="myChartLine"></canvas>
             </div>

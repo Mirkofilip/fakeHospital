@@ -104,11 +104,14 @@ ul {
   text-align: center;
   background: var(--color-gray);
   border-radius: 30px;
-  padding: 50px 22px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   min-height: 100vh;
   min-width: 0px;
   min-width: 0px;
   flex: 1 1 0%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .title {
@@ -202,9 +205,9 @@ body {
   width: 100%;
 }
 
-.box-top {
+/* .box-top {
   margin-bottom: 15px;
-}
+} */
 
 .btn {
   background-color: var(--color-primary);
@@ -295,6 +298,7 @@ body {
   text-decoration: none;
 }
 
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -303,25 +307,36 @@ body {
     transform: rotate(360deg);
   }
 }
-
+/* 
 @media (min-width: 1536px) {
-  .\32xl\:col-span-3 {
+  .xl-col-span-3 {
     grid-column: span 3 / span 3;
   }
-  .\32xl\:col-span-9 {
+  .xl-col-span-9 {
     grid-column: span 9 / span 9;
   }
 }
 
 @media(min-width:1280px) {
-  .xl\:col-span-4 {
+  .xl-col-span-4 {
     grid-column: span 4 / span 4;
   }
-  .xl\:col-span-8 {
+  .xl-col-span-8 {
     grid-column: span 8 / span 8;
 }
+} */
+
+@media(min-width:767px) {
+  .rowMarginRight {
+    margin-right: 5px;
+  }
 }
 
+@media(max-width:575px) {
+  .box {
+    margin-top: 15px;
+  }
+}
 
 @media (max-width: calc(1279px)) {
   .sideMenu {
@@ -331,15 +346,18 @@ body {
     display: none;
   }
 }
-
+/* 
 @media(min-width: 1024px) {
-  .lg\:col-span-3 {
+  .lg-col-span-3 {
     grid-column: span 3 / span 3;
   }
-}
+} */
 
 @media (max-width:425px) {
   .sideMenu {
     display: none;
+  }
+  body {
+    padding: 0;
   }
 }
