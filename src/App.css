@@ -327,4 +327,19 @@ body {
   .sideMenu {
       width: 85px;
   }
+  .sideMenu span {
+    display: none;
+  }
+}
+
+@media(min-width: 1024px) {
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+}
+
+@media (max-width:425px) {
+  .sideMenu {
+    display: none;
+  }
 }

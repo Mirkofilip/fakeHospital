@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import './App.css';
 import SideMenu from './components/sideMenu';
 import Calendar from './components/calendar';
-import BoxTop from './components/boxTop'
+import BoxTop from './components/boxTop';
+import BoxChartPie from './components/boxChartPie';
+import BoxChartLine from './components/boxChartLine';
+// import BoxChartDoughnut from './components/BoxChartDoughnut';
 
 function App() {
   const [selectedMenuItem, setSelectedMenuItem] = useState('calendar');
@@ -27,6 +30,9 @@ function App() {
         <div className="grid grid-cols-12">
           {selectedMenuItem === 'calendar' && <BoxTop />}
           {selectedMenuItem === 'calendar' && <Calendar />}
+          {selectedMenuItem === 'dashboard' && <BoxChartPie />}
+          {selectedMenuItem === 'dashboard' && <BoxChartLine />}
+          {/* {selectedMenuItem === 'dashboard' && <BoxChartDoughnut />} */}
         </div>
       </div>
     </div>
