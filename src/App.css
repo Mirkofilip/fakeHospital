@@ -48,6 +48,7 @@ ul {
 
 .sideMenu ul li a svg {
   margin-right: 15px;
+  stroke-width: 2px;
 }
 
 .sideMenu ul li.active a {
@@ -112,6 +113,7 @@ ul {
   flex: 1 1 0%;
   padding-left: 15px;
   padding-right: 15px;
+  position: relative;
 }
 
 .title {
@@ -205,9 +207,9 @@ body {
   width: 100%;
 }
 
-/* .box-top {
+.box-top {
   margin-bottom: 15px;
-} */
+}
 
 .btn {
   background-color: var(--color-primary);
@@ -297,7 +299,116 @@ body {
   color: #000;
   text-decoration: none;
 }
+/* 
+.cardRow {
+  margin-bottom: 15px;
+} */
 
+.boxSm .ico {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.boxSm .dato {
+  margin-bottom: 15px;
+}
+
+.boxSm {
+  text-align: left;
+  background: #fff;
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: all .2s linear;
+  position: relative;
+  box-shadow: 0px 3px 20px #0000000b;
+}
+
+.boxSm:hover {
+  transform: scale(1.1);
+}
+
+.dato {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.dataDescription {
+  color: #ccc;
+  text-transform: uppercase;
+}
+
+.fakeAccess {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ccc;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  transition: all .2s linear;
+  cursor: pointer;
+}
+
+.fakeAccess:hover {
+  background:var(--color-primary);
+}
+
+.floatMenu {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  background: var(--color-primary);
+  height: 100%;
+  padding: 15px;
+  width: 100%;
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  flex-direction: column;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+}
+
+.floatMenu a:after {
+  content: none;
+}
+
+.floatMenu.active {
+  left: 0;
+}
+
+.floatMenu li a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 1.2;
+}
+
+.headerMobile {
+  display: none;
+  height: 80px;
+  padding: 30px 15px;
+  text-align: right;
+  position: sticky;
+  top: 0;
+  z-index: 999999999;
+  background-color: var(--color-primary);
+  border-radius: 0px 0px 20px 20px;
+}
+
+.hamburger svg {
+  transform: rotate(-90deg) scale(1.5);
+  font-size: 50px;
+  stroke-width: 2;
+  stroke: #fff;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -307,34 +418,17 @@ body {
     transform: rotate(360deg);
   }
 }
-/* 
-@media (min-width: 1536px) {
-  .xl-col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-  .xl-col-span-9 {
-    grid-column: span 9 / span 9;
-  }
-}
 
-@media(min-width:1280px) {
-  .xl-col-span-4 {
-    grid-column: span 4 / span 4;
-  }
-  .xl-col-span-8 {
-    grid-column: span 8 / span 8;
-}
-} */
-
-@media(min-width:767px) {
-  .rowMarginRight {
-    margin-right: 5px;
-  }
-}
 
 @media(max-width:575px) {
   .box {
     margin-top: 15px;
+  }
+  .cardRow {
+    margin-bottom: 0;
+  }
+  .fc-toolbar-chunk .fc-button-group {
+    display: none;
   }
 }
 
@@ -346,14 +440,22 @@ body {
     display: none;
   }
 }
-/* 
-@media(min-width: 1024px) {
-  .lg-col-span-3 {
-    grid-column: span 3 / span 3;
+
+@media(min-width:545px) {
+  .floatMenu {
+    display: none;
   }
-} */
+}
+
 
 @media (max-width:425px) {
+  .headerMobile {
+    display: block;
+  }
+
+  .logo {
+    margin-bottom: 25px;
+  }
   .sideMenu {
     display: none;
   }

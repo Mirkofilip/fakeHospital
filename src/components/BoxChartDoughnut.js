@@ -45,8 +45,8 @@ function BoxChartDoughnut() {
     }, []);
 
     return (
-        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay:0.3, duration: 0.5 }}  className="col-md-12 col-sm-6 box">
-            <div className="box-top">
+        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay:0.3, duration: 0.5 }}  className="col-md-12 col-sm-6">
+            <div className="box-top box">
                 <canvas ref={canvasRef} id="myChart"></canvas>
             </div>
         </motion.div>

@@ -1,4 +1,4 @@
-import LogoHospital from '../hospital-svgrepo-com.svg'
+import LogoHospital from '../hospital-svgrepo-com.svg';
 import React, { useState } from 'react';
 function SideMenu(props) {
     const [selectedMenuItem, setSelectedMenuItem] = useState('calendar');

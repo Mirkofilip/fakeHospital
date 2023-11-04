@@ -13,16 +13,22 @@ function BoxChart() {
             }
 
             const newChart = new Chart(canvasRef.current, {
-                type: 'line',
+                type: 'bubble',
                 data: {
-                    labels: ['Covid', 'Ebola', 'Cold', 'Plague', 'Purple', 'Orange'],
                     datasets: [{
-                        label: '# of Virus',
-                        data: [12, 19, 3, 5, 2, 3],
-                        borderWidth: 1
-                    }]
+                        type: 'bar',
+                        label: 'Bar Dataset',
+                        data: [10, 20, 30, 40]
+                    }, {
+                        type: 'line',
+                        label: 'Line Dataset',
+                        data: [50, 14, 20, 70],
+                    }],
+                    labels: ['January', 'February', 'March', 'April']
                 },
                 options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
                     scales: {
                         y: {
                             beginAtZero: true
@@ -36,8 +42,8 @@ function BoxChart() {
     }, []);
 
     return (
-        <div className="col-span-12 xl-col-span-8 xl-col-span-9">
-            <div className="col-span-12 box">
+        <div className="col-md-8 col-sm-12">
+            <div className="box">
                 <canvas ref={canvasRef} id="myChartLine"></canvas>
             </div>
         </div>
