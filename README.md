@@ -1,14 +1,16 @@
 # fakeHospital
 
-Fake hospital management exercise
+# Description
+
+Demo developed in react for a hospital management system.
 
 # live Demo
 
-https://fakehospital-5a9e9.web.app/
+[Demo](https://fakehospital-5a9e9.web.app/)
 
 # Figma design
 
-https://www.figma.com/file/L2iga2bmBDVaCxwp2NzPIk/Fake-Hospital-design?type=design&node-id=0%3A1&mode=design&t=l5xlOKywH5nvjyey-1
+[Figma Design](https://www.figma.com/file/L2iga2bmBDVaCxwp2NzPIk/Fake-Hospital-design?type=design&node-id=0%3A1&mode=design&t=l5xlOKywH5nvjyey-1)
 
 ## Available Scripts
 
