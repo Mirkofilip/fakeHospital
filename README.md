@@ -15,10 +15,10 @@ Demo developed in react for a hospital management system.
 
 # Framework and Js
 
-[React](https://react.dev/)
-[Bootstrap](https://getbootstrap.com/)
-[chartjs](https://www.chartjs.org/)
-[fullCalendar](https://fullcalendar.io/)
+[React](https://react.dev/) \
+[Bootstrap](https://getbootstrap.com/) \
+[chartjs](https://www.chartjs.org/) \
+[fullCalendar](https://fullcalendar.io/) \
 
 
 ## Available Scripts
