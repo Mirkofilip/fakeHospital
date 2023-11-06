@@ -18,7 +18,7 @@ Demo developed in react for a hospital management system.
 [React](https://react.dev/) \
 [Bootstrap](https://getbootstrap.com/) \
 [chartjs](https://www.chartjs.org/) \
-[fullCalendar](https://fullcalendar.io/) \
+[fullCalendar](https://fullcalendar.io/) 
 
 
 ## Available Scripts
