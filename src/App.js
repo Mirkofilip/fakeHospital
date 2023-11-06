@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import React, { useState } from 'react';
 import './App.css';
 import SideMenu from './components/sideMenu';
@@ -6,12 +5,10 @@ import Calendar from './components/calendar';
 import BoxTop from './components/boxTop';
 import BoxChartPie from './components/boxChartPie';
 import BoxChartLine from './components/boxChartLine';
-// import { motion } from 'framer-motion';
 import HeaderCalendar from './components/headerCalendar';
 import HeaderDashboard from './components/headerDashboard';
 import Card from './components/card';
 import MenuMobile from './components/MenuMobile';
-// import BoxChartDoughnut from './components/BoxChartDoughnut';
 
 function App() {
   const [selectedMenuItem, setSelectedMenuItem] = useState('calendar');
