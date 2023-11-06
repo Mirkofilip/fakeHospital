@@ -12,6 +12,15 @@ Demo developed in react for a hospital management system.
 
 [Figma Design](https://www.figma.com/file/L2iga2bmBDVaCxwp2NzPIk/Fake-Hospital-design?type=design&node-id=0%3A1&mode=design&t=l5xlOKywH5nvjyey-1)
 
+
+# Framework and Js
+
+[React](https://react.dev/)
+[Bootstrap](https://getbootstrap.com/)
+[chartjs](https://www.chartjs.org/)
+[fullCalendar](https://fullcalendar.io/)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
